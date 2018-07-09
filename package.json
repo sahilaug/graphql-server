@@ -1,0 +1,61 @@
+{
+  "name": "graphql-niq",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node ./server.js",
+    "dev": "nodemon ./server.js --exec babel-node",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "./node_modules/.bin/eslint --fix src/**/*.js",
+    "prettier": "prettier --write src/**/*.js",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.js": [
+      "prettier --write",
+      "./node_modules/.bin/eslint --fix src/**/*.js",
+      "git add"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-express": "1.2.0",
+    "axios": "0.17.0",
+    "babel-cli": "6.26.0",
+    "babel-core": "6.26.0",
+    "babel-eslint": "8.0.2",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "base64-url": "2.0.0",
+    "body-parser": "1.18.2",
+    "casual": "1.5.17",
+    "compression": "1.7.1",
+    "concurrently": "3.5.0",
+    "cookie-parser": "1.4.3",
+    "cors": "2.8.4",
+    "dotenv": "4.0.0",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-babel": "4.1.2",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "express": "4.16.2",
+    "express-jwt": "5.3.0",
+    "graphql": "0.11.7",
+    "graphql-tools": "2.7.2",
+    "husky": "0.14.3",
+    "jsonwebtoken": "8.1.0",
+    "jwt-simple": "0.5.1",
+    "lint-staged": "5.0.0",
+    "lodash": "4.17.4",
+    "nodemon": "1.12.1",
+    "onchange": "3.2.1",
+    "path": "0.12.7",
+    "prettier": "1.8.2"
+  }
+}
